@@ -1,0 +1,36 @@
+<ion-view view-title="">
+  <ion-content class="padding">
+    <ion-scroll delegate-handle="app-index-scroll-nav" zooming="false" direction="x" style="width: 100%;">
+        <div class="app-index-nav" style="width: {{appNndexNavWidth}}%;">
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+            <a href="">栏目名称</a>
+        </div>
+    </ion-scroll>
+    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)" delegate-handle="app-index-slide" class="app-index-slide">
+        <ion-slide >
+            <div class="box " ng-style="appIndexSlideStyle">
+                <ion-content>
+                    <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh(category._id)">
+                    </ion-refresher>
+                    <div class="app-lists list">
+                        <a href="">栏目名称</a>
+                        <a href="">栏目名称</a>
+                        <a href="">栏目名称</a>
+                        <a href="">栏目名称</a>
+                    </div>
+                    <ion-infinite-scroll distance="1%">
+                    </ion-infinite-scroll>
+                </ion-content>
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>

@@ -1,7 +1,6 @@
 /* Empty. Add your own CSS if you like */
 /* Empty. Add your own CSS if you like */
 /* Utilities */
-
 .link {
     color: #116262;
     font-weight: bold;
@@ -221,9 +220,14 @@ margin-top:10px;
 /*
 *@ menu 
  */
+.scroll-view{
+    background-color: #f8f8f8;
+}
 .app-index-nav {
     border-color: #b2b2b2;
     background-color: #f8f8f8;
+    width: 500px;
+    overflow-x:auto;
     
 }
 .app-index-nav > a{
@@ -233,4 +237,6 @@ margin-top:10px;
     color: #444;
 }
 
-
+.app-index-nav::-webkit-scrollbar{
+           display: none;
+}

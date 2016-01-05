@@ -3,7 +3,7 @@
 		中国句容
 	    </ion-nav-title>
 		<ion-content scroll="false">
-			<ion-scroll delegate-handle="app-index-scroll-nav" zooming="false" width="200%" direction="x">
+			<ion-scroll delegate-handle="app-index-scroll-nav" zooming="false" direction="x"  style="width: 100%;">
 		        <div class="app-index-nav tabs-stable">
 		            <a nav-transition="none" ui-sref="tab.list">新闻中心</a>
 		            <a ui-sref="tab.list">部门动态</a>
@@ -20,6 +20,17 @@
 					<ion-content padding="false">
 						<ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
 						<ion-list class="list">
+							<ion-slide-box class="slide__focus" does-continue="true" auto-play="true" on-slide-changed="slideHasChanged($index)" show-pager="true">
+								<ion-slide>
+							  		<img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" height="200">
+								</ion-slide>
+								<ion-slide>
+							  		<img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" height="200">
+								</ion-slide>
+								<ion-slide>
+							  		<img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" height="200">
+								</ion-slide>
+							</ion-slide-box>
 							<ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
 							      <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
 							      <h2>{{item.title}}</h2>
@@ -58,17 +69,18 @@
 			</ion-slide-box>
     	</ion-content>
 	</ion-view>
-	<ion-tabs class="tabs-stable tabs-icon-top">
-          <ion-tab title="首页" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="tab.index">
+
+    <ion-tabs class="tabs-stable tabs-icon-top">
+          <ion-tab title="新闻中心" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="tab.index">
             <!-- Tab 1 content -->
           </ion-tab>
-          <ion-tab title="新闻中心" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tab.list">
+          <ion-tab title="魅力句容" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tab.list">
             <!-- Tab 2 content -->
           </ion-tab>
-          <ion-tab title="魅力句容" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" ui-sref="tab.list">
+          <ion-tab title="公共服务" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" ui-sref="tab.list">
             <!-- Tab 3 content -->
           </ion-tab>
-          <ion-tab title="公共服务" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" ui-sref="tab.list">
+          <ion-tab title="互动交流" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" ui-sref="tab.list">
             <!-- Tab 4 content -->
           </ion-tab>
-        </ion-tabs>
+    </ion-tabs>

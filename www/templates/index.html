@@ -5,13 +5,12 @@
     <ion-content scroll="false">
         <ion-scroll delegate-handle="app-index-scroll-nav" zooming="false" direction="x" style="width: 100%;">
             <div class="app-index-nav tabs-stable">
-                <a nav-transition="none" id="quote-1" ui-sref="tab.list">栏目名称</a>
+                <a nav-transition="none" id="quote-0" class="hover" ui-sref="tab.list">栏目名称</a>
+                <a ui-sref="tab.list" id="quote-1">栏目名称</a>
                 <a ui-sref="tab.list" id="quote-2">栏目名称</a>
                 <a ui-sref="tab.list" id="quote-3">栏目名称</a>
                 <a ui-sref="tab.list" id="quote-4">栏目名称</a>
                 <a ui-sref="tab.list" id="quote-5">栏目名称</a>
-                <a ui-sref="tab.list" id="quote-6">栏目名称</a>
-                <a ui-sref="tab.list" id="quote-7">栏目名称</a>
             </div>
         </ion-scroll>
         <!-- fouce -->
@@ -20,7 +19,7 @@
                 <ion-content padding="false">
                     <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
                     <ion-list class="list" >
-                        <ion-slide-box class="slide__focus" on-release="onRelease()" on-touch="onDrag()"  delegate-handle="ion-list-pics" does-continue="true" auto-play="true" on-slide-changed="slideHasChanged($index)" show-pager="true">
+                        <ion-slide-box class="slide__focus" on-release="onRelease()" on-touch="onDrag()"  delegate-handle="ion-list-pics" does-continue="true" auto-play="true" show-pager="true">
                             <ion-slide>
                                 <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" width="100%" height="200">
                             </ion-slide>
@@ -31,6 +30,45 @@
                                 <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" width="100%" height="200">
                             </ion-slide>
                         </ion-slide-box>
+                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
+                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.content}}</p>
+                            <p class="time">{{item.time}}</p>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-slide>
+            <ion-slide>
+                <ion-content padding="false">
+                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
+                    <ion-list class="list">
+                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
+                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.content}}</p>
+                            <p class="time">{{item.time}}</p>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-slide>
+            <ion-slide>
+                <ion-content padding="false">
+                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
+                    <ion-list class="list">
+                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
+                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.content}}</p>
+                            <p class="time">{{item.time}}</p>
+                        </ion-item>
+                    </ion-list>
+                </ion-content>
+            </ion-slide>
+            <ion-slide>
+                <ion-content padding="false">
+                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
+                    <ion-list class="list">
                         <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
                             <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
                             <h2>{{item.title}}</h2>

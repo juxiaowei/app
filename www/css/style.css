@@ -223,7 +223,9 @@ margin-top:10px;
 .scroll-view{
     background-color: #f8f8f8;
 }
-
+.app-index-nav .hover{
+    color: rgb(223,48,49);
+}
 .app-index-nav {
     border-color: #b2b2b2;
     background-color: #f8f8f8;

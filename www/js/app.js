@@ -41,7 +41,7 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
   // Each tab has its own nav history stack:
 
   .state('tab.index', {
-    url: '/index',
+    url: '/index?channel_id',
     views: {
       'menuContent': {
         templateUrl: 'templates/index.html',

@@ -1,25 +1,9 @@
 Ionic App Base
 =====================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+##interface
+获取新闻资讯稿件列表接口：http://www.jurong.gov.cn/ucapComponentJR/web/findManuscriptList?mType=xwzx
 
-## Using this project
+获取普通稿件文章页接口：http://www.jurong.gov.cn/ucapComponentJR/web/findManuscriptContent?mid=77af6f1bccfe43f796ff4aac805addc1&contentType=0
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
-```bash
-$ npm install -g ionic
-```
-
-Then run:
-
-```bash
-$ ionic start myProject tabs
-```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
-
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+获取信息公开稿件文章页接口：http://localhost:8080/ucapComponentJR/web/findManuscriptContent?mid=fd2ae9758a3b4e2aa0243780b263e1e8&contentType=1

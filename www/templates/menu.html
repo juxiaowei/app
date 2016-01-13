@@ -8,25 +8,8 @@
             <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
         </ion-nav-buttons>
      </ion-nav-bar>
-     
-    <ion-tabs class="tabs-stable tabs-icon-top">
-        <ion-tab title="新闻中心" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="tab.xwzx">
-            <!-- Tab 1 新闻中心 -->
-            <ion-nav-view name="xwzx" ></ion-nav-view>
-        </ion-tab>
-        <ion-tab title="魅力句容" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tab.charm">
-            <!-- Tab 2 魅力句容 -->
-            <ion-nav-view name="charm" ></ion-nav-view>
-        </ion-tab>
-        <ion-tab title="信息公开" icon-on="ion-ios-book" icon-off="ion-ios-book-outline" ui-sref="tab.xxgk">
-            <!-- Tab 3 信息公开 -->
-            <ion-nav-view name="xxgk" ></ion-nav-view>
-        </ion-tab>
-        <ion-tab title="互动交流" icon-on="ion-ios-basketball" icon-off="ion-ios-basketball-outline" ui-sref="tab.hdjl">
-            <!-- Tab 4 互动交流 -->
-            <ion-nav-view name="hdjl" ></ion-nav-view>
-        </ion-tab>
-    </ion-tabs>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
   <!-- Main content, usually <ion-nav-view> -->
   </ion-side-menu-content>
 

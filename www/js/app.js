@@ -40,18 +40,18 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
 
   // Each tab has its own nav history stack:
 
-  // .state('tab.index', {
-  //   url: '/index',
-  //   abstract: true,
-  //   views: {
-  //     'menuContent': {
-  //       templateUrl: 'templates/index.html',
-  //       controller: 'AppCtrl'
-  //     }
-  //   }
-  // })
+  .state('tab.index', {
+    url: '/index',
+    abstract: true,
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/index.html',
+        controller: 'AppCtrl'
+      }
+    }
+  })
 
-  .state('tab.xwzx', {
+  .state('tab.index.xwzx', {
     url: '/xwzx',
     views: {
       'xwzx': {
@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
     }
   })
 
-  .state('tab.charm', {
+  .state('tab.index.charm', {
     url: '/charm',
     views: {
       'charm': {
@@ -71,7 +71,7 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
     }
   })
 
-  .state('tab.xxgk', {
+  .state('tab.index.xxgk', {
     url: '/xxgk',
     views: {
       'xxgk': {
@@ -84,24 +84,14 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
   .state('tab.detail', {
     url: '/detail/:id',
     views: {
-      'xwzx': {
+      'menuContent': {
         templateUrl: 'templates/detail.html',
         controller: 'ContentCtrl'
-      }
-    }
-  })
-
-  .state('tab.list', {
-    url: '/list',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/list.html',
-        controller: 'ListCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/index');
+  $urlRouterProvider.otherwise('/tab/index/xwzx');
 
 });

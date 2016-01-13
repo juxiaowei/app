@@ -1,125 +1,19 @@
-<ion-view>
-    <ion-nav-title view-title="">
-        中国句容
-    </ion-nav-title>
-    <ion-content scroll="false">
-        <ion-scroll delegate-handle="app-index-scroll-nav" zooming="false" direction="x" style="width: 100%;">
-            <div class="app-index-nav tabs-stable">
-                <a nav-transition="none" id="quote-0" class="hover" ng-click="appIndexSlide('1')">栏目名称</a>
-                <a ng-click="appIndexSlide('2')" id="quote-1">栏目名称</a>
-                <a ng-click="appIndexSlide('3')" id="quote-2">栏目名称</a>
-                <a ng-click="appIndexSlide($index)" id="quote-3">栏目名称</a>
-                <a ng-click="appIndexSlide($index)" id="quote-4">栏目名称</a>
-                <a ng-click="appIndexSlide($index)" id="quote-5">栏目名称</a>
-            </div>
-        </ion-scroll>
-        <!-- fouce -->
-        <ion-slide-box delegate-handle="ion-list-content"  class="slide__box" on-slide-changed="slideHasChanged($index)" show-pager="false">
-            <ion-slide>
-                <ion-content padding="false">
-                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
-                    <ion-list class="list" >
-                        <ion-slide-box class="slide__focus" on-release="onRelease()" on-touch="onDrag()"  delegate-handle="ion-list-pics" does-continue="true" auto-play="true" show-pager="true">
-                            <ion-slide>
-                                <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" width="100%" height="200">
-                            </ion-slide>
-                            <ion-slide>
-                                <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" width="100%" height="200">
-                            </ion-slide>
-                            <ion-slide>
-                                <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg" width="100%" height="200">
-                            </ion-slide>
-                        </ion-slide-box>
-                        <ion-item ng-repeat="item in data['xwzx']" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
-                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
-                            <h2>{{item.title}}</h2>
-                            <p>{{item.content}}</p>
-                            <p class="time">{{item.time}}</p>
-                        </ion-item>
-                    </ion-list>
-                    <ion-infinite-scroll ng-if="$index==slideIndex" on-infinite="loadMore()" distance="1%">
-                    </ion-infinite-scroll>
-                </ion-content>
-            </ion-slide>
-            <ion-slide>
-                <ion-content padding="false">
-                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
-                    <ion-list class="list">
-                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
-                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
-                            <h2>{{item.title}}</h2>
-                            <p>{{item.content}}</p>
-                            <p class="time">{{item.time}}</p>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </ion-slide>
-            <ion-slide>
-                <ion-content padding="false">
-                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
-                    <ion-list class="list">
-                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
-                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
-                            <h2>{{item.title}}</h2>
-                            <p>{{item.content}}</p>
-                            <p class="time">{{item.time}}</p>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </ion-slide>
-            <ion-slide>
-                <ion-content padding="false">
-                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
-                    <ion-list class="list">
-                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
-                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
-                            <h2>{{item.title}}</h2>
-                            <p>{{item.content}}</p>
-                            <p class="time">{{item.time}}</p>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </ion-slide>
-            <ion-slide>
-                <ion-content padding="false">
-                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
-                    <ion-list class="list">
-                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
-                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
-                            <h2>{{item.title}}</h2>
-                            <p>{{item.content}}</p>
-                            <p class="time">{{item.time}}</p>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </ion-slide>
-            <ion-slide>
-                <ion-content padding="false">
-                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
-                    <ion-list class="list">
-                        <ion-item ng-repeat="item in news" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
-                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
-                            <h2>{{item.title}}</h2>
-                            <p>{{item.content}}</p>
-                            <p class="time">{{item.time}}</p>
-                        </ion-item>
-                    </ion-list>
-                </ion-content>
-            </ion-slide>
-        </ion-slide-box>
-    </ion-content>
-</ion-view>
+
 <ion-tabs class="tabs-stable tabs-icon-top">
-    <ion-tab title="新闻中心" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="tab.index">
-        <!-- Tab 1 content -->
+    <ion-tab title="新闻中心" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="tab.xwzx">
+        <!-- Tab 1 新闻中心 -->
+        <ion-nav-view name="xwzx" ></ion-nav-view>
     </ion-tab>
-    <ion-tab title="魅力句容" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tab.mljr">
-        <!-- Tab 2 content -->
+    <ion-tab title="魅力句容" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tab.charm">
+        <!-- Tab 2 魅力句容 -->
+        <ion-nav-view name="charm" ></ion-nav-view>
     </ion-tab>
-    <ion-tab title="公共服务" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" ui-sref="tab.ggfw">
-        <!-- Tab 3 content -->
+    <ion-tab title="信息公开" icon-on="ion-ios-book" icon-off="ion-ios-book-outline" ui-sref="tab.xxgk">
+        <!-- Tab 3 信息公开 -->
+        <ion-nav-view name="xxgk" ></ion-nav-view>
     </ion-tab>
     <ion-tab title="互动交流" icon-on="ion-ios-basketball" icon-off="ion-ios-basketball-outline" ui-sref="tab.hdjl">
-        <!-- Tab 4 content -->
+        <!-- Tab 4 互动交流 -->
+        <ion-nav-view name="hdjl" ></ion-nav-view>
     </ion-tab>
 </ion-tabs>

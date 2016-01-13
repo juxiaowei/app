@@ -1,8 +1,16 @@
 var contentUrl= "http://data.vip-tao.cn/api/v2/jhs";
 angular.module('starter.appctrl',[])
-.controller('AppCtrl', function($http,$scope,$ionicSlideBoxDelegate, News,$ionicPosition,$ionicScrollDelegate,$stateParams) {
+.controller('AppCtrl', function($http,$scope,$ionicSlideBoxDelegate, News ,$ionicPosition,$ionicScrollDelegate,$stateParams , Channel) {
 
   $scope.data = [];
+
+  $scope.channel = [];
+// 新闻中心
+  $scope.channel['xwzx'] = Channel.allNewsChannel();
+// 美丽句容
+  $scope.channel['charm'] = Channel.allCharmChannel();
+// 信息公开
+  $scope.channel['xxgk'] = Channel.allXxgkChannel();
 
   $scope.data['xwzx'] = News.all();
 

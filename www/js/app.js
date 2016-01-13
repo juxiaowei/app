@@ -31,7 +31,7 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/menu.html'
@@ -40,11 +40,31 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
 
   // Each tab has its own nav history stack:
 
-  .state('tab.index', {
-    url: '/index?channel_id',
+  .state('tab.xwzx', {
+    url: '/xwzx',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/index.html',
+      'xwzx': {
+        templateUrl: 'templates/xwzx.html',
+        controller: 'AppCtrl'
+      }
+    }
+  })
+
+  .state('tab.charm', {
+    url: '/charm',
+    views: {
+      'charm': {
+        templateUrl: 'templates/charm.html',
+        controller: 'AppCtrl'
+      }
+    }
+  })
+
+  .state('tab.xxgk', {
+    url: '/xxgk',
+    views: {
+      'xxgk': {
+        templateUrl: 'templates/xxgk.html',
         controller: 'AppCtrl'
       }
     }
@@ -53,7 +73,7 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
   .state('tab.detail', {
     url: '/detail/:id',
     views: {
-      'menuContent': {
+      'xwzx': {
         templateUrl: 'templates/detail.html',
         controller: 'ContentCtrl'
       }

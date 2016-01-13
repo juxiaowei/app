@@ -1,15 +1,32 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content edge-drag-threshold="true">
-    <ion-nav-bar class="bar-positive">
+     <ion-nav-bar class="bar-positive">
         <ion-nav-back-button class="no-text button-clear">
-        返回
+            返回
         </ion-nav-back-button>
         <ion-nav-buttons side="left">
             <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
         </ion-nav-buttons>
-    </ion-nav-bar>
-  	<ion-nav-view name="menuContent" >
-    </ion-nav-view>
+     </ion-nav-bar>
+     
+    <ion-tabs class="tabs-stable tabs-icon-top">
+        <ion-tab title="新闻中心" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline" ui-sref="tab.xwzx">
+            <!-- Tab 1 新闻中心 -->
+            <ion-nav-view name="xwzx" ></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="魅力句容" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tab.charm">
+            <!-- Tab 2 魅力句容 -->
+            <ion-nav-view name="charm" ></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="信息公开" icon-on="ion-ios-book" icon-off="ion-ios-book-outline" ui-sref="tab.xxgk">
+            <!-- Tab 3 信息公开 -->
+            <ion-nav-view name="xxgk" ></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="互动交流" icon-on="ion-ios-basketball" icon-off="ion-ios-basketball-outline" ui-sref="tab.hdjl">
+            <!-- Tab 4 互动交流 -->
+            <ion-nav-view name="hdjl" ></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
   <!-- Main content, usually <ion-nav-view> -->
   </ion-side-menu-content>
 
@@ -17,25 +34,22 @@
   <ion-side-menu side="left">
         <ion-header-bar class="expanded">
             <div class="menu-bottom">
-                Ionic Material API
+                中国句容
             </div>
         </ion-header-bar>
         <ion-content class="stable-bg has-expanded-header">
             <ion-list>
                 <ion-item nav-clear menu-close href="#/app/components">
-                    Components+
+                    新闻中心
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/extensions">
-                    Extensions
+                    魅力句容
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/lists">
-                    Motion Lists
-                </ion-item>
-                <ion-item nav-clear menu-close href="#/app/motion">
-                    Motion Elements
+                    信息公开
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/ink">
-                    Ink
+                    互动交流
                 </ion-item>
             </ion-list>
         </ion-content>

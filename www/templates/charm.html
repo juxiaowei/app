@@ -1,0 +1,41 @@
+<ion-view>
+    <ion-nav-title view-title="">
+        中国句容
+    </ion-nav-title>
+    <ion-content scroll="false">
+        <ion-scroll delegate-handle="app-index-scroll-nav" zooming="false" direction="x" style="width: 100%;">
+            <div class="app-index-nav tabs-stable">
+                <a ng-repeat="channel in channel['charm']" ng-click="appIndexSlide('{{channel.code}}')" id="quote-{{channel.channel_id}}">{{channel.channel_name}}</a>
+            </div>
+        </ion-scroll>
+        <!-- fouce -->
+        <ion-slide-box delegate-handle="ion-list-content"  class="slide__box" on-slide-changed="slideHasChanged($index)" show-pager="false">
+            <ion-slide>
+                <ion-content padding="false">
+                    <ion-refresher pulling-text="正在刷新" on-refresh="doRefresh()"></ion-refresher>
+                    <ion-list class="list" >
+                        <ion-slide-box class="slide__focus" on-release="onRelease()" on-touch="onDrag()"  delegate-handle="ion-list-pics" does-continue="true" auto-play="true" show-pager="true">
+                            <ion-slide>
+                                <img src="http://www.jurong.gov.cn/jurong/jrfg/201506/e57effe212d44d28931501a9f850c299/images/797968e4c5b64769b9a8c687084c8133.jpg" width="100%" height="200">
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="http://www.jurong.gov.cn/jurong/jrfg/201506/e57effe212d44d28931501a9f850c299/images/797968e4c5b64769b9a8c687084c8133.jpg" width="100%" height="200">
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="http://www.jurong.gov.cn/jurong/jrfg/201506/e57effe212d44d28931501a9f850c299/images/797968e4c5b64769b9a8c687084c8133.jpg" width="100%" height="200">
+                            </ion-slide>
+                        </ion-slide-box>
+                        <ion-item ng-repeat="item in data['xwzx']" class="item item-thumbnail-left" ui-sref="tab.detail({id:item.id})">
+                            <img src="http://www.jurong.gov.cn/mzj/tpxw/201512/5399d8346404420fa29d574a57c85bd7/images/fa0d166d86ec44198397621a34911bea.jpg">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.content}}</p>
+                            <p class="time">{{item.time}}</p>
+                        </ion-item>
+                    </ion-list>
+                    <ion-infinite-scroll ng-if="$index==slideIndex" on-infinite="loadMore()" distance="1%">
+                    </ion-infinite-scroll>
+                </ion-content>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

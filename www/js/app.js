@@ -40,15 +40,16 @@ angular.module('starter', ['ionic', 'starter.listctrl' , 'starter.appctrl' , 'st
 
   // Each tab has its own nav history stack:
 
-  .state('tab.index', {
-    url: '/index',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/index.html',
-        controller: 'AppCtrl'
-      }
-    }
-  })
+  // .state('tab.index', {
+  //   url: '/index',
+  //   abstract: true,
+  //   views: {
+  //     'menuContent': {
+  //       templateUrl: 'templates/index.html',
+  //       controller: 'AppCtrl'
+  //     }
+  //   }
+  // })
 
   .state('tab.xwzx', {
     url: '/xwzx',
